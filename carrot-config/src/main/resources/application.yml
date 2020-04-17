@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: carrot-config
+  profiles:
+    active: git
+  cloud:
+    config:
+      label: master
+      server:
+        git:
+          uri: https://github.com/White-Radish/carrot-config.git
+          username: White-Radish
+          password: 5132017hk
+          clone-on-start: true
+          search-paths: '{application}'
+
+
+
+
+server:
+  port: 8764
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/

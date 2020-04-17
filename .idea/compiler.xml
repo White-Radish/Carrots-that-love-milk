@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="carrot-config" />
+        <module name="carrot-getway" />
+        <module name="carrot-mail" />
+        <module name="carrot-user" />
+        <module name="carrot-mpg" />
+        <module name="carrot-order" />
+        <module name="carrot-regist" />
+        <module name="carrot-feign" />
+      </profile>
+    </annotationProcessing>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="carrot-config" options="-parameters" />
+      <module name="carrot-feign" options="-parameters" />
+      <module name="carrot-getway" options="-parameters" />
+      <module name="carrot-mail" options="-parameters" />
+      <module name="carrot-mpg" options="-parameters" />
+      <module name="carrot-order" options="-parameters" />
+      <module name="carrot-regist" options="-parameters" />
+      <module name="carrot-user" options="-parameters" />
+    </option>
+  </component>
+</project>

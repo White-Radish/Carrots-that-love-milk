@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: carrot-mail
+  mail:
+    #host需要服务器能连到
+    host: 182.92.230.156
+    username: hukai@broadxt.com
+    password: 1qazXSW@
+    default-encoding: utf-8
+
+server:
+  port: 8765
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+
+mail:
+  fromMail:
+    addr: hukai@broadxt.com

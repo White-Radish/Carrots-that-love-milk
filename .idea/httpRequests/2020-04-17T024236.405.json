@@ -1,0 +1,7 @@
+{
+  "timestamp": "2020-04-17T06:42:35.862+0000",
+  "status": 405,
+  "error": "Method Not Allowed",
+  "message": "Request method 'POST' not supported",
+  "path": "/user/getUser/1"
+}
