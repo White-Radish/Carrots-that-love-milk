@@ -1,0 +1,28 @@
+spring:
+  quartz:
+    #quartz定时器相关属性配置 官网下载源码包\quartz-2.3.0-SNAPSHOT\src\org\quartz\impl\jdbcjobstore 路径下可以找到对应quart内置所需的表创建sql
+    properties:
+      org:
+        quartz:
+          scheduler:
+            instanceName: myScheduler
+            instanceId: AUTO
+          jobStore:
+            class: org.quartz.impl.jdbcjobstore.JobStoreTX
+            driverDelegateClass: org.quartz.impl.jdbcjobstore.PostgreSQLDelegate
+            tablePrefix: QRTZ_
+#            isClustered: true
+#            clusterCheckinInterval: 100
+            useProperties: true
+          threadPool:
+            class: org.quartz.simpl.SimpleThreadPool
+            threadCount: 10
+            threadPriority: 5
+            threadsInheritContextClassLoaderOfInitializingThread: true
+
+    #数据库方式
+      #初始化表结构
+      #jdbc:
+    initialize-schema: never
+    #基于数据库形式
+    job-store-type: jdbc

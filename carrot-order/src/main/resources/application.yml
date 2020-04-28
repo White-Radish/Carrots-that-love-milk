@@ -1,6 +1,8 @@
 server:
   port: 8767
 spring:
+  profiles:
+    include: quartmemory
   application:
     name: carrot-user
   datasource:
@@ -20,6 +22,7 @@ eureka:
       defaultZone: http://localhost:8761/eureka/
 
 mybatis-plus:
+  type-aliases-package: com.mmd.carrotorder.entity
   global-config:
     db-config:
       id-type: auto
@@ -32,5 +35,14 @@ mybatis-plus:
       db-type: mysql
     refresh: false
   configuration:
+#    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
     map-underscore-to-camel-case: true
     cache-enabled: false
+#  type-aliases-package: com.mmd.carrotorder.entity
+# 控制台打印sql
+logging:
+  level:
+    com:
+      mmd:
+        carrotorder:
+          mapper: debug
